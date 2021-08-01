@@ -10,15 +10,21 @@ import SwiftUI
 struct ContentView: View {
     
     var contacts = [
-        Contact(name: "Alice", company: "ABC"),
-        Contact(name: "Bob", company: "ABC"),
-        Contact(name: "Charles", company: "ABC")
+        Contact(name: "Alice", company: "Apple", rating: 5),
+        Contact(name: "Bob", company: "Box"),
+        Contact(name: "Charles", company: "Coconuts")
     ]
     
     var body: some View {
         NavigationView {
-            List(contacts) {
-                Text($0.name)
+            List(contacts) { contact in
+                VStack(alignment: .leading) {
+                    Text(contact.name)
+                        .font(.headline)
+                    Text(contact.company)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
             }
             .navigationTitle("Contacts")
         }
