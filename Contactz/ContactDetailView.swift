@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactDetailView: View {
     
-    var contact: Contact
+    @State var contact: Contact
     
     var body: some View {
         VStack {
@@ -29,6 +29,11 @@ struct ContactDetailView: View {
                 .font(.headline)
                 .foregroundColor(.gray)
                 .padding(5.0)
+            VStack(alignment: .leading) {
+                Text("Rating")
+                Slider(value: $contact.rating, in: 0...5, step: 1)
+            }
+            .padding()
             Spacer()
         }
             
