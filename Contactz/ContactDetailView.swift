@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactDetailView: View {
     
-    @State var contact: Contact
+    @Binding var contact: Contact
     
     var body: some View {
         ZStack {
@@ -52,6 +52,6 @@ struct ContactDetailView: View {
 
 struct ContactDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactDetailView(contact: Contact(name: "Alice", company: "YouTube"))
+        ContactDetailView(contact: .constant(Contact(name: "Alice", company: "YouTube")))
     }
 }
