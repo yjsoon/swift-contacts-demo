@@ -12,6 +12,7 @@ struct Contact: Identifiable {
     var name: String
     var company: String
     var rating: Double = 0.0
+    var background: String = "bg"
     var id = UUID()
     
 }

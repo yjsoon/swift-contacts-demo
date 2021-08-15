@@ -12,29 +12,39 @@ struct ContactDetailView: View {
     @State var contact: Contact
     
     var body: some View {
-        VStack {
-            Image(contact.name)
+        ZStack {
+            Image(contact.background)
                 .resizable()
-                .frame(width: 200.0, height: 200.0)
-                .scaledToFit()
-                .mask(Circle())
-                .overlay(Circle()
-                            .stroke(lineWidth: 8)
-                            .foregroundColor(.white))
-                .shadow(radius: 10)
-                .padding(.top, 30.0)
-            Text(contact.name)
-                .font(.largeTitle)
-            Text(contact.company)
-                .font(.headline)
-                .foregroundColor(.gray)
-                .padding(5.0)
-            VStack(alignment: .leading) {
-                Text("Rating")
-                Slider(value: $contact.rating, in: 0...5, step: 1)
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .opacity(0.5)
+                .scaleEffect(1.2)
+                .blur(radius: 10)
+            VStack {
+                Image(contact.name)
+                    .resizable()
+                    .frame(width: 200.0, height: 200.0)
+                    .scaledToFit()
+                    .mask(Circle())
+                    .overlay(Circle()
+                                .stroke(lineWidth: 8)
+                                .foregroundColor(.white))
+                    .shadow(radius: 10)
+                    .padding(.top, 30.0)
+                Text(contact.name)
+                    .font(.largeTitle)
+                Text(contact.company)
+                    .font(.headline)
+                    .padding(5.0)
+                    .frame(width: .infinity)
+                VStack(alignment: .leading) {
+                    Text("Rating")
+                        .bold()
+                    Slider(value: $contact.rating, in: 0...5, step: 1)
+                        .accentColor(/*@START_MENU_TOKEN@*/.green/*@END_MENU_TOKEN@*/)
+                }
+                .padding()
+                Spacer()
             }
-            .padding()
-            Spacer()
         }
             
     }
