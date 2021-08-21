@@ -19,7 +19,7 @@ struct ContentView: View {
         NavigationView {
             List(contacts) { contact in
                 let index = contacts.firstIndex {
-                    $0.name == contact.name
+                    $0.id == contact.id
                 }!
                 
                 NavigationLink(destination: ContactDetailView(contact: $contacts[index])) {
@@ -40,6 +40,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        ContentView()
         ContentView().preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }

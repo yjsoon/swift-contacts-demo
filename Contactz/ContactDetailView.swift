@@ -35,7 +35,6 @@ struct ContactDetailView: View {
                 Text(contact.company)
                     .font(.headline)
                     .padding(5.0)
-                    .frame(width: .infinity)
                 VStack(alignment: .leading) {
                     Text("Rating")
                         .bold()
