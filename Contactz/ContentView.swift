@@ -37,8 +37,12 @@ struct ContentView: View {
                 .onDelete(perform: { indexSet in
                     contacts.remove(atOffsets: indexSet)
                 })
+                .onMove(perform: { indices, newOffset in
+                    contacts.move(fromOffsets: indices, toOffset: newOffset)
+                })
             }
             .navigationTitle("Contacts")
+            .navigationBarItems(leading: EditButton())
         }
         
     }
