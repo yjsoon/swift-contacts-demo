@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contact: Identifiable {
+struct Contact: Identifiable, Codable {
     
     var name: String
     var company: String

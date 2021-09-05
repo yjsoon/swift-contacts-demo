@@ -13,6 +13,7 @@
 		AF02503526B67A5B0032B396 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF02503426B67A5B0032B396 /* Preview Assets.xcassets */; };
 		AF02505D26B6859D0032B396 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02505C26B6859D0032B396 /* Contact.swift */; };
 		AF2CB40526D23B8E00AFAAB0 /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CB40426D23B8E00AFAAB0 /* NewContactView.swift */; };
+		AFA9E48726E4AA2100BA477F /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9E48626E4AA2100BA477F /* ContactManager.swift */; };
 		AFBDDB7E26BFBC260023EFC8 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDDB7D26BFBC260023EFC8 /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		AF02503626B67A5B0032B396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF02505C26B6859D0032B396 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AF2CB40426D23B8E00AFAAB0 /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
+		AFA9E48626E4AA2100BA477F /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Contactz/ContactManager.swift; sourceTree = "<group>"; };
 		AFBDDB7D26BFBC260023EFC8 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +44,7 @@
 		AF02502126B67A590032B396 = {
 			isa = PBXGroup;
 			children = (
+				AFA9E48626E4AA2100BA477F /* ContactManager.swift */,
 				AF02502C26B67A590032B396 /* Contactz */,
 				AF02502B26B67A590032B396 /* Products */,
 			);
@@ -151,6 +154,7 @@
 				AF02505D26B6859D0032B396 /* Contact.swift in Sources */,
 				AF2CB40526D23B8E00AFAAB0 /* NewContactView.swift in Sources */,
 				AF02503026B67A590032B396 /* ContentView.swift in Sources */,
+				AFA9E48726E4AA2100BA477F /* ContactManager.swift in Sources */,
 				AF02502E26B67A590032B396 /* ContactzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

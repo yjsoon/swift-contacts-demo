@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var contacts = [
-        Contact(name: "Alice", company: "Apple", rating: 5, background: "Alice"),
-        Contact(name: "Bob", company: "Box"),
-        Contact(name: "Charles", company: "Coconuts"),
-        Contact(name: "Blah blah", company: "Donkeys")
-    ]
+        
+    @Binding var contacts: [Contact]
     @State var isSheetShown = false
     
     var body: some View {
@@ -59,7 +54,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        ContentView().preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+        ContentView(contacts: .constant([]))
     }
 }
