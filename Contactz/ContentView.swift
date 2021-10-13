@@ -15,12 +15,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(contacts) { contact in
-                    let index = contacts.firstIndex {
-                        $0.id == contact.id
-                    }!
+                ForEach($contacts) { $contact in
                     
-                    NavigationLink(destination: ContactDetailView(contact: $contacts[index])) {
+                    NavigationLink(destination: ContactDetailView(contact: $contact)) {
                         VStack(alignment: .leading) {
                             Text(contact.name)
                                 .font(.headline)
